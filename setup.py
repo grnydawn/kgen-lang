@@ -92,9 +92,10 @@ def main():
         entry_points={'console_scripts': ['kgen=kgen_lang:main']},
         classifiers=classifiers,
         keywords="kernel extraction",
-        cmdclass={'test': KGenLang},
+        cmdclass={'kgenlang': KGenLang},
         # the following should be enabled for release
-        setup_requires=['setuptools-scm'],
+        setup_requires=['pytest-runner', 'setuptools-scm'],
+        tests_require=['pytest'],
         python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
         install_requires=install_requires,
         extras_require=extras_require,
