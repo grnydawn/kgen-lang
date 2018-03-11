@@ -3,5 +3,6 @@ import pytest
 
 import _kgen_lang
 
-def test_dummy():
-    pass
+def test_main():
+    from _kgen_lang.config import main
+    main()
